@@ -23,6 +23,10 @@ class Artist
     self.all.find {|artist| artist.name == name}
   end
 
+  def self.cretae(name)
+    self.new(name).tap {|artist| artist.name == name}
+  end
+
   def save
     @@all << self
     self
