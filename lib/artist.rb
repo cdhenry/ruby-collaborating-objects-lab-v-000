@@ -24,7 +24,7 @@ class Artist
   end
 
   def self.cretae(name)
-    self.new(name).tap {|artist| artist.name == name}
+    self.new(name).tap {|artist| artist.save}
   end
 
   def save
